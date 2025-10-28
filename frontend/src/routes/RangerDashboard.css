@@ -1,0 +1,313 @@
+.ranger-dashboard {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #2f3542;
+}
+.ranger-header {
+  background: rgb(151, 157, 173);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+}
+.ranger-user-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #2f3542;
+  position: relative; 
+  z-index: 1001; 
+}
+
+.ranger-username {
+  font-weight: normal;
+  color: #2f3542;
+}
+
+.ranger-logout-btn {
+  background-color: #e74d3c00;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ranger-logout-btn:hover {
+  font-weight: bold;
+}
+
+.ranger-main {
+  flex-grow: 1;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 0; 
+  position: relative;
+}
+
+.ranger-map-section {
+  flex: 1;
+  min-width: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; 
+}
+
+.ranger-poacher-info {
+  flex-basis: 350px;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #5e555541;
+  position: relative;
+  z-index: 1; /* Lower z-index for poacher info */
+}
+
+.poacher-alert {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.poacher-location {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.poacher-image {
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.no-poacher-message {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+}
+
+
+.notification-container {
+  position: relative;
+  margin-right: 15px;
+}
+
+.notification-bell {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #2f3542; 
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1002; 
+}
+
+.notification-bell:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.notification-bell .fa-bell {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #2f3542; 
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff4d4f;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #979dad;
+  font-weight: bold;
+  z-index: 1003; /* Highest within the bell */
+}
+
+.notification-panel {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 350px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1010; /* Much higher than map and other elements */
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  background-color: #f8f9fa;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.notification-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2f3542;
+  font-weight: 600;
+}
+
+.close-panel {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.close-panel:hover {
+  color: #333;
+}
+
+.notification-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item:hover {
+  background-color: #f5f7ff;
+}
+
+.notification-content strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #2f3542;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.notification-content p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.notification-content small {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.no-notifications {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* Scrollbar styling for notification list */
+.notification-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notification-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.notification-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animation for new notifications */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.notification-badge.new {
+  animation: pulse 0.5s ease-in-out 2;
+}
+
+/* Make sure Font Awesome is loaded */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ranger-main {
+    flex-direction: column;
+  }
+  
+  .ranger-poacher-info {
+    flex-basis: auto;
+    max-height: 300px;
+  }
+  
+  .notification-panel {
+    width: 300px;
+    right: -10px;
+    z-index: 1010; 
+  }
+  
+  .notification-bell {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .notification-bell .fa-bell {
+    font-size: 1.2rem;
+  }
+}
+
+
+.leaflet-top, .leaflet-bottom {
+  z-index: 2 !important;
+}

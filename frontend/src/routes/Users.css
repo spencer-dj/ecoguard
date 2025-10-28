@@ -1,0 +1,91 @@
+/* Users.css */
+
+.users-container {
+  padding: 20px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.users-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.users-actions {
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.create-user-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.create-user-btn:hover {
+  background: #43a047;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.users-table th,
+.users-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+.users-table th {
+  background-color: #f4f6f8;
+  color: #555;
+  font-weight: 600;
+}
+
+.users-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.users-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s ease;
+}
+
+.edit-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+}

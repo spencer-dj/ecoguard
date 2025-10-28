@@ -1,0 +1,61 @@
+.sidebar {
+  background-image: url('elephant.jpg');
+  background-position: center;
+  background-size: auto 565px;
+  background-repeat: no-repeat;
+  background-color: #2f3542;
+  color: white;
+  width: 220px;
+  transition: width 0.3s ease;
+  position:fixed;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+.sidebar-toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-toggle-btn.closed {
+  justify-content: center;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.sidebar-nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-nav ul li:hover {
+  background-color: #57606f;
+}
+
+.sidebar-nav ul li span {
+  margin-left: 15px;
+}
+
+.sidebar-footer {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  text-align: center;
+}

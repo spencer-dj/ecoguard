@@ -1,0 +1,197 @@
+.loginPageWrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('/public/rhino2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.loginContainer {
+  max-width: 450px;
+  width: 90%;
+  padding: 3rem 2.5rem;
+  background: rgba(255, 255, 255, 0.212);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  color: #1a202c;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #2563eb, #10b981);
+  border-radius: 10px 10px 0 0;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcomeText {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #1c1e20;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 1.8rem;
+  width: 100%;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 1.4rem 1.2rem 0.6rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #f9fafb;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.inputGroup input:hover {
+  border-color: #9ca3af;
+  background: #fff;
+}
+
+.inputGroup input:focus {
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
+
+.inputGroup label {
+  position: absolute;
+  left: 1.2rem;
+  top: 1.1rem;
+  color: #9ca3af;
+  font-size: 1rem;
+  pointer-events: none;
+  background: transparent;
+  padding: 0 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus + label,
+.inputGroup input:not(:placeholder-shown) + label {
+  top: 0.5rem;
+  font-size: 0.8rem;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.loginButton {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  width: 100%;
+  padding: 1.1rem 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.25);
+  margin-top: 0.5rem;
+}
+
+.loginButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(37, 99, 235, 0.3);
+}
+
+.loginButton:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.25);
+}
+
+.loginButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.loginButton:hover::after {
+  left: 100%;
+}
+
+.signupText {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.signupLink {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.signupLink:hover {
+  color: #1e40af;
+}
+
+.signupLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #2563eb;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.signupLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .loginContainer {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .welcomeText {
+    font-size: 1.75rem;
+  }
+}
