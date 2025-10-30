@@ -1,7 +1,6 @@
 # EcoGuard — AI-Powered Wildlife Monitoring System
 
-EcoGuard is an intelligent wildlife monitoring system designed to **detect poachers** and **track animal movements**.  
-It uses **XGBoost** for behavioral prediction and **PyTorch** for image classification, integrated into a **Django backend** and **React frontend** dashboard.
+EcoGuard is an intelligent wildlife monitoring system designed to detect poachers and track animal movements. It uses XGBoost for behavioral prediction and Keras (TensorFlow) for image classification, integrated into a Django backend and React frontend dashboard.
 
 ---
 
